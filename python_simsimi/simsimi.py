@@ -1,6 +1,6 @@
-from language_codes import LC_ENGLISH
+from python_simsimi.language_codes import LC_ENGLISH
 import urllib2, urllib, json
-from response_codes import RESPONSE_OK
+from python_simsimi.response_codes import RESPONSE_OK
 
 class SimSimiException(Exception):
 	pass
