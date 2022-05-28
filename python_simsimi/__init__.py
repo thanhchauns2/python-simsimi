@@ -1,4 +1,4 @@
-from simsimi import SimSimi
+from python_simsimi.simsimi import SimSimi
 
 __version__ = "1.0"
 __app_name__ = "python_simsimi"
