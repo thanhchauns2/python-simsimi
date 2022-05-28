@@ -1,5 +1,5 @@
 from python_simsimi.language_codes import LC_ENGLISH
-import urllib2, urllib, json
+import urllib, json
 from python_simsimi.response_codes import RESPONSE_OK
 
 class SimSimiException(Exception):
@@ -24,7 +24,7 @@ class SimSimi(object):
 
 		requestUrl = "%s?%s" % (self.conversation_request_url, urllib.urlencode(requestParam))
 
-		response = urllib2.urlopen(requestUrl)
+		response = urllib.request.urlopen(requestUrl)
 		responseDict = json.loads(str(response.read()))
 
 		if responseDict['result'] != RESPONSE_OK:
