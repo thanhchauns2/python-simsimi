@@ -22,7 +22,7 @@ class SimSimi(object):
 			'text':text
 		}
 
-		requestUrl = "%s?%s" % (self.conversation_request_url, urllib.urlencode(requestParam))
+		requestUrl = "%s?%s" % (self.conversation_request_url, urllib.parse.urlencode(requestParam))
 
 		response = urllib.request.urlopen(requestUrl)
 		responseDict = json.loads(str(response.read()))
